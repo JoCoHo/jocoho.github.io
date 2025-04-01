@@ -1,0 +1,218 @@
+/* Universal selector, margin set to zero so that edge doesn't appear around header, banner image and footer */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #08AEEA;
+    background-image: linear-gradient(60deg, #08AEEA 0%, #2AF598 100%);
+	font-family: "Archivo", Arial, Helvetica, sans-serif;
+	color: white;
+}
+
+a {
+	text-decoration: none; /* Removes underlines from all elements that use <a>. */
+}
+
+a:visited {
+	color: white;
+  }
+
+a:hover {
+	transition: transform 0.75s;
+	color:coral;
+}
+
+ul li {
+	list-style-type: none; /*removes bullet points from navbar*/
+}
+
+nav {
+	display: flex; /*allows logo and navbar links to be displayed side by side*/
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 1.8rem;
+}
+
+ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 50px;
+}
+
+.nav-item {
+	font-size: 1.7em;
+	margin-left: 2em;
+    text-decoration: none; 
+    font-weight: bold;
+    text-transform: lowercase; 
+    position: relative;
+}
+
+/* psuedo-element for the animated underline. content is blank so that no additional content is added. transform with scaleX keeps underline hidden */
+.nav-item::after {
+	content: "";
+  	position: absolute;
+ 	height: 2px;
+  	background-color: orange;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	transition: transform 0.75s;
+  	transform-origin: bottom right;
+  	transform: scaleX(0);
+}
+
+.nav-item:hover::after {
+	transform-origin: bottom left;
+  	transform: scaleX(1);
+}
+
+.container { 
+  	width: 100%;
+ 	height: 100vh;
+  	margin: 0 auto;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.container p {
+	font-size: 1.4em;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+	scroll-snap-align: start;
+	text-align: center;
+}
+
+.m1 h1 {
+	text-align: left;
+	margin-left: 40px;
+	font-size: 6em;
+	color: white;
+	overflow: hidden;
+	background: linear-gradient(to right, orange, orange 50%, white 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;	
+	background-position: 100%;
+	transition: background-position 999ms ease;
+	text-decoration: none;
+	&:hover {
+	  background-position: 0 100%;
+	}
+}
+
+.m2 {
+	background: linear-gradient(90deg, #ba466d 0%, #b59144 100%);
+}
+
+#btn-abt {
+	font-family: "Archivo", Arial, Helvetica, sans-serif;
+	color: white;
+	font-weight: 600;
+	font-size: 1.5em;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: rgba(255, 255, 255, 0);
+	border: 5px solid white;
+	width: 60%;
+	padding: 25px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#btn-abt:hover {
+	background-color: #b5222290;
+	box-shadow: #00000080 0 12px 16px;
+}
+
+#btn-abt:active {
+	box-shadow: none;
+  }
+
+.m3 {
+	background: linear-gradient(90deg, #45408f 0%, #60a3d8 100%);
+}
+
+.m4 {
+	background-image: linear-gradient(315deg, #F97794 10%, #623AA2 100%);
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.column > div {
+	color: white;
+	margin: .1em;
+	padding: .3em 1em;
+	border-radius: 3px;
+	flex: 1;
+}
+
+.m2 .column {
+	padding: 10px;
+	max-width: 480px;
+}
+
+#j1-img {
+	object-fit: cover;
+	box-shadow: -20px -20px 0px 0px #ffffff59; /* shadow for image to appear at top left */
+	transition: box-shadow 2s, transform 2s; /* animation for hover transformation below */
+}
+
+#j1-img:hover {
+	box-shadow: 20px 20px 0px 0px #ffffff59;
+	transform: scale(1.1); /* enlarges image upon cursor hover */
+}
+
+#j2-img {
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#about-img {
+	object-fit: cover;
+}
+
+h1 {
+	margin-top: 20px;
+	font-size: 3.3em;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+p {
+	margin-top: 20px;
+	font-size: 1.1em;
+}
+
+/* styles the hr tag so as to visually seperate the content within the body. */
+hr {
+	display: block;
+	width: 50%;
+	margin-top: -15px;
+	border-top-style: dotted;
+	border-width: 5px 0px 0px 0px;
+}
+
+footer {
+	margin: 100px;
+}
