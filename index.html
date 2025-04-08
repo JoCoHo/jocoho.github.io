@@ -63,10 +63,31 @@
 		</div>
 		<div class="main m4">
 			<div class="column"><h1>Get in touch.</h1>
-			<p>It's best to contact me via email, though I may also be reached via other means.<br>
-			Click on here.</div>
+			<p>It's best to contact me via email, though I may also be reached via other means.</p><br>
+				<button id="btn-form" onclick="openForm()">Click here.</button>
+				<div class="form-popup" id="contactForm">
+					<form action="/action_page.php" class="form-container">
+					  	<h2>Send me your message</h2>
+					  	<label for="username"><b>Your name</b></label>
+					  	<input type="text" placeholder="Your name" name="username" required>
+					  	<label for="email"><b>Your email</b></label>
+					  	<input type="email" placeholder="Your email" name="email" required>	
+						<label for="message"><b>Write your message below</b></label>
+						<textarea rows="4" cols="50" name="message" form="contactForm" required></textarea>  
+					  	<button type="submit" class="btn">Submit message</button>
+					  	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					</form>
+				  </div></div></div>
 		</div>
 	</div>
+	<script>
+		function openForm() {
+  		document.getElementById("contactForm").style.display = "block";
+		}
+		function closeForm() {
+  		document.getElementById("contactForm").style.display = "none";
+		}
+	</script>
 </body>
 
 <!-- Footer -->
