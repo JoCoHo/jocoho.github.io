@@ -14,7 +14,6 @@ html {
 
 a {
 	text-decoration: none; /* Removes underlines from all elements that use <a>. */
-	color: white;
 }
 
 a:visited {
@@ -290,6 +289,15 @@ p {
 /* hover effects for buttons */
 .form-container .btn:hover, .open-button:hover {
 	opacity: 1;
+}
+
+.icon img {
+	transition: transform 0.5s; /* animation for hover transformation below */
+	margin: 10px;
+}
+
+.icon img:hover {
+	transform:scale(1.2);
 }
 
 /* styles the hr tag so as to visually seperate the content within the body. */
