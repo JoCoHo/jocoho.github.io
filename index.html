@@ -31,7 +31,7 @@
 			  	<a href="#about" class="nav-link" id="nav-link">About</a>
 			</li>
 			<li class="nav-item">
-				<a href="#about" class="nav-link" id="nav-link">Projects</a>
+				<a href="#projects" class="nav-link" id="nav-link">Projects</a>
 		  </li>
 			<li class="nav-item">
 			  	<a href="#contact" class="nav-link" id="nav-link">Get in touch</a>
@@ -44,12 +44,15 @@
 
 <body>
 	<div class="container">
+		<div id="index">
 		<div class="main m1">
 			<div class="column"><img id="j1-img" src="img/jh.jpg" alt="A picture of myself." width="460" height ="740"></div>
 			<div class="column"><div class="inquis"><h1>Inquisitive.</h1></div>
 			<div class="innov"><h1>Innovative.</h1></div>
 			<div class="passion"><h1>Passionate.</h1></div></div>
 		</div>
+		</div>
+		<div id="about">
 		<div class="main m2">
 			<div class="column"><img id="j2-img" src="img/jh2.jpg" alt="Another picture of myself." width="400" height ="400"></h1></div>
 			<div class="column"><h1>About me.</h1>
@@ -57,10 +60,14 @@
 			With experience in web development, programming, networking, datbase management, troubleshooting and beyond, my enthuasiasm is genuine and driven.</p>
 			<button id="btn-abt" role="button">Click here to learn more.</button></div>
 		</div>
+		</div>
+		<div id="projects">
 		<div class="main m3">
 			<div class="column"><h1>My projects.</h1>
 			<p>Under construction. Check back later!</div>
 		</div>
+		</div>
+		<div id="contact">
 		<div class="main m4">
 			<div class="column"><h1>Get in touch.</h1>
 			<p>It's best to contact me via email, though I may also be reached via other means.</p><br>
@@ -78,10 +85,15 @@
 					  	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 					</form>
 				  </div>
-				  <div class="icon"><img src="img/icons/email.png"><img src="img/icons/linkedin.png"><img src="img/icons/github.png"><img src="img/icons/tiktok.png"></div>
+				  <div class="icon">
+					<br>
+					<img src="img/icons/email.png" width="40" height ="40" />
+					<img src="img/icons/linkedin.png" width="40" height ="40" />
+					<a href="https://github.com/JoCoHo"><img src="img/icons/github.png" width="40" height ="40" /></a>
 				</div>
 			</div>		  
 		</div>
+	    </div>
 	</div>
 	<script>
 		function openForm() {
