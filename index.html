@@ -8,7 +8,6 @@
     <title>
 	    Joel - Home
 	</title>
-	<link rel="stylesheet" href="fullpage.min.css">
 	<link rel="stylesheet" href="joelsite.css">
 	<style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo');
@@ -53,13 +52,40 @@
 		</div>
 		</div>
 		<div id="about">
-		<div class="main m2">
-			<div class="column"><img id="j2-img" src="img/jh2.jpg" alt="Another picture of myself." width="400" height ="400"></h1></div>
-			<div class="column"><h1>About me.</h1>
-			<p>My love for computing goes back years.<br><br>
-			With experience in web development, programming, networking, datbase management, troubleshooting and beyond, my enthuasiasm is genuine and driven.</p>
-			<button id="btn-abt" role="button">Click here to learn more.</button></div>
-		</div>
+			<div class="main m2">
+				  <div class="slideshow-container">
+			  
+					<!-- Slide 1 -->
+					<div class="slide fade">
+					  <img id="j2-img" src="img/jh2.jpg" alt="Another picture of myself." width="400" height="400">
+					  <h1>About me.</h1>
+					  <p>My love for computing goes back years.<br><br>
+					  With experience in web development, programming, networking, database management, troubleshooting and beyond, my enthusiasm is genuine and driven.</p>
+					</div>
+			  
+					<!-- Slide 2 -->
+					<div class="slide fade">
+					  <h1>My Background</h1>
+					  <p>HTML, CSS, JavaScript, Python, SQL, Linux, Git, and more. I'm passionate about building, fixing, and learning new technologies.</p>
+					</div>
+			  
+					<!-- Slide 3 -->
+					<div class="slide fade">
+					  <h1>What I'm Looking For</h1>
+					  <p>A role that challenges me, lets me contribute to real projects, and helps me grow as a developer in a collaborative environment.</p>
+					</div>
+
+					<!-- Navigation buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					
+					<!-- Dots -->
+					<div class="dots-container" style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+					</div>
+			</div>
 		</div>
 		<div id="projects">
 		<div class="main m3">
@@ -100,11 +126,10 @@
   		document.getElementById("contactForm").style.display = "block";
 		}
 		function closeForm() {
-  		document.getElementById("contactForm").style.display = "none";
+  		document.getElementById("contactForm").style.display = "none";dw
 		}
 	</script>
-	<script src="fullpage.min.js"></script>
-	<script src="app.js"></script>
+	<script src="slideshow.js"></script>
 </body>
 
 <!-- Footer -->

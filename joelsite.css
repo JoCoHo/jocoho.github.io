@@ -112,7 +112,7 @@ ul {
 	transition: background-position 999ms ease;
 	text-decoration: none;
 	&:hover {
-	  background-position: 0 100%;
+	  background-position: 0 100%; /* orange text effect upon hover */
 	}
 }
 
@@ -120,29 +120,80 @@ ul {
 	background: linear-gradient(90deg, #ba466d 0%, #b59144 100%);
 }
 
-#btn-abt {
-	font-family: "Archivo", Arial, Helvetica, sans-serif;
-	color: white;
-	font-weight: 600;
-	font-size: 1.5em;
-	margin: 0 auto;
-	margin-top: 30px;
-	background: rgba(255, 255, 255, 0);
-	border: 5px solid white;
-	width: 60%;
-	padding: 25px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-}
-
-#btn-abt:hover {
-	background-color: #b5222290;
-	box-shadow: #00000080 0 12px 16px;
-}
-
-#btn-abt:active {
-	box-shadow: none;
+.slideshow-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
   }
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide h1 {
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* fade animation for slideshow */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* slideshow buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 40px;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+	left: 0px;
+}
+
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+ /* dots for slideshow */
+.dot {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 0px 6px;
+    background-color: #f27c7c96;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+    background-color: #ff6565c1;
+}
 
 .m3 {
 	background: linear-gradient(90deg, #45408f 0%, #60a3d8 100%);
@@ -184,10 +235,6 @@ ul {
 #j2-img {
 	object-fit: cover;
 	border-radius: 50%;
-}
-
-#about-img {
-	object-fit: cover;
 }
 
 h1 {
